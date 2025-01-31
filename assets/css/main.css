@@ -528,12 +528,13 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
-  color: #48A6A7;
+  color: #2CD3E1;
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: #B1C29E;
 }
 
 .hero p span {

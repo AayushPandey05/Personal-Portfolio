@@ -1003,210 +1003,77 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
-.service-details .services-list {
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
-}
-
-.service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.service-details h4 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.service-details p {
-  font-size: 15px;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-}
-
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
-  color: var(--accent-color);
-}
 
 /*-----mobile------
-/* Mobile-specific adjustments */
+
+/* Hero Section Fixes */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area */
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15px; /* Add some padding for mobile */
+}
+
+/* Mobile-specific adjustments for Hero Section */
 @media (max-width: 768px) {
-  /* Header adjustments */
-  .header {
-    width: 100%;
-    position: relative;
-    padding: 20px 15px;
-    margin: 0;
-  }
-
-  .header .profile-img {
-    margin: 10px auto;
-  }
-
-  .header .logo {
-    margin: 10px 0;
-  }
-
-  .header .social-links {
-    margin: 10px 0;
-  }
-
-  /* Hero section adjustments */
   .hero {
-    padding: 60px 15px;
+    height: auto; /* Adjust height for mobile */
+    min-height: 100vh; /* Ensure it covers the full screen */
+  }
+
+  .hero img {
+    position: relative; /* Change to relative for better mobile behavior */
+    height: auto; /* Allow the image to scale naturally */
+    min-height: 100vh; /* Ensure it covers the full screen */
+  }
+
+  .hero:before {
+    display: none; /* Remove overlay on mobile if needed */
   }
 
   .hero .container {
-    padding: 0 15px;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-    margin: 10px 0 0;
-  }
-
-  /* About section adjustments */
-  .about .container {
-    padding: 0 15px;
-  }
-
-  .about .row {
-    margin: 0;
-  }
-
-  .about .col-lg-4,
-  .about .col-lg-8 {
-    padding: 0;
-  }
-
-  .about .content {
-    padding: 20px 15px;
-  }
-
-  /* General section adjustments */
-  section {
-    padding: 40px 15px;
-  }
-
-  .section-title {
+    padding-top: 80px; /* Add space for the header */
     padding-bottom: 40px;
   }
 
-  /* Remove unnecessary margins */
-  .container {
-    margin: 0;
-    padding: 0 15px;
-  }
-
-  /* Fix image margins */
-  img {
-    margin: 0 auto;
-    display: block;
-  }
-
-  /* Adjust content margins */
-  .content {
-    margin: 0;
-    padding: 15px;
-  }
-
-  /* Fix spacing in resume section */
-  .resume .resume-item {
-    padding-left: 15px;
-    margin-left: 0;
-  }
-
-  /* Contact section adjustments */
-  .contact .info-wrap {
-    margin-bottom: 20px;
-  }
-
-  .contact .php-email-form {
-    padding: 20px;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-  /* Make everything more compact */
-  .header {
-    padding: 15px;
-  }
-
-  .header .profile-img img {
-    width: 120px;
-    height: 120px;
-  }
-
   .hero h2 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Adjust font size for mobile */
+    margin-top: 20px; /* Add some margin */
   }
 
   .hero p {
-    font-size: 1rem;
-  }
-
-  .about .content h2 {
-    font-size: 1.5rem;
-  }
-
-  .section-title h2 {
-    font-size: 1.8rem;
-  }
-
-  /* Adjust skill bars */
-  .skills .progress {
-    margin-bottom: 15px;
-  }
-
-  /* Contact form adjustments */
-  .contact .php-email-form input,
-  .contact .php-email-form textarea {
-    margin-bottom: 10px;
+    font-size: 1.2rem; /* Adjust font size for mobile */
   }
 }

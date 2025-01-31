@@ -1067,3 +1067,146 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
+/*-----mobile------
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .header {
+    width: 100%;
+    position: relative;
+    padding: 20px 15px;
+    margin: 0;
+  }
+
+  .header .profile-img {
+    margin: 10px auto;
+  }
+
+  .header .logo {
+    margin: 10px 0;
+  }
+
+  .header .social-links {
+    margin: 10px 0;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero .container {
+    padding: 0 15px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+  }
+
+  /* About section adjustments */
+  .about .container {
+    padding: 0 15px;
+  }
+
+  .about .row {
+    margin: 0;
+  }
+
+  .about .col-lg-4,
+  .about .col-lg-8 {
+    padding: 0;
+  }
+
+  .about .content {
+    padding: 20px 15px;
+  }
+
+  /* General section adjustments */
+  section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    padding-bottom: 40px;
+  }
+
+  /* Remove unnecessary margins */
+  .container {
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  /* Fix image margins */
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Adjust content margins */
+  .content {
+    margin: 0;
+    padding: 15px;
+  }
+
+  /* Fix spacing in resume section */
+  .resume .resume-item {
+    padding-left: 15px;
+    margin-left: 0;
+  }
+
+  /* Contact section adjustments */
+  .contact .info-wrap {
+    margin-bottom: 20px;
+  }
+
+  .contact .php-email-form {
+    padding: 20px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  /* Make everything more compact */
+  .header {
+    padding: 15px;
+  }
+
+  .header .profile-img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Adjust skill bars */
+  .skills .progress {
+    margin-bottom: 15px;
+  }
+
+  /* Contact form adjustments */
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    margin-bottom: 10px;
+  }
+}

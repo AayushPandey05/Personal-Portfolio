@@ -1077,3 +1077,28 @@ section,
     font-size: 1.2rem; /* Adjust font size for mobile */
   }
 }
+
+/* Hero Section Margin Fix */
+.hero {
+  margin-top: 0; /* Remove default top margin */
+  padding-top: 0; /* Remove default top padding */
+}
+
+/* Adjust header and hero spacing */
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: var(--background-color); /* Match your header background color */
+  }
+
+  .hero {
+    padding-top: 60px; /* Adjust this value to reduce the top space */
+  }
+
+  .hero .container {
+    padding-top: 20px; /* Reduce container padding */
+  }
+}
